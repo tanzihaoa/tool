@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/what_eat_today">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ivEat"
+            android:layout_width="236dp"
+            android:layout_height="247dp"
+            android:layout_marginTop="96dp"
+            android:src="@drawable/icon_whate_eat_today"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLayoutEat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/icon_whate_eat_chird_bg"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ivEat">
+
+            <TextView
+                android:id="@+id/tvTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center"
+                android:text="时间"
+                android:textColor="#949494"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llWhatEat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTimeTitle">
+
+                <TextView
+                    android:id="@+id/tvEatToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今天"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTodayOrTom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中午"
+                    android:textColor="#FFC612"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吃什么"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/icon_menu_eat_content_bg"
+                android:gravity="center"
+                android:text="111"
+                android:textColor="#333333"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llWhatEat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvRandomMenu"
+            android:layout_width="239dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/shape_today_eat_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="换一个菜"
+            android:textColor="#B87A52"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clLayoutEat" />
+
+        <ImageView
+            android:id="@+id/ivWhatEatTodayBack"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/icon_what_eat_today_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

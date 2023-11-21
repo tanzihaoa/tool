@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- /storage/emulated/0/Download/${applicationId}/.beta/apk-->
+    <external-path
+        name="beta_external_path"
+        path="Download/" />
+    <!--/storage/emulated/0/Android/data/${applicationId}/files/apk/-->
+    <external-path
+        name="beta_external_files_path"
+        path="Android/data/" />
+
+    <!-- 这个下载路径也不可以修改，必须为GDTDOWNLOAD -->
+    <external-cache-path
+        name="gdt_sdk_download_path1"
+        path="com_qq_e_download" />
+    <cache-path
+        name="gdt_sdk_download_path2"
+        path="com_qq_e_download" />
+
+    <external-path
+        name="tt_external_root"
+        path="." />
+    <external-path
+        name="tt_external_download"
+        path="Download" />
+    <external-files-path
+        name="tt_external_files_download"
+        path="Download" />
+    <files-path
+        name="tt_internal_file_download"
+        path="Download" />
+    <cache-path
+        name="tt_internal_cache_download"
+        path="Download" />
+
+    <external-path
+        name="files_root"
+        path="Android/data/${applicationId}/" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+</paths>

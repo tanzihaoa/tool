@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.CurrencyActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设置"
+                android:textColor="#ff333333"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cr_tv1"
+            android:text="汇率换算"
+            android:textSize="14sp"
+            android:textColor="#060606"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_top"/>
+
+        <TextView
+            android:id="@+id/cr_left_tv"
+            android:text="1 人民币 约等于"
+            android:textColor="#898989"
+            android:textSize="11sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/cr_tv1"
+            app:layout_constraintTop_toBottomOf="@+id/cr_tv1"/>
+
+        <TextView
+            android:id="@+id/cr_rate"
+            android:text="0.1434"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/cr_right_tv"
+            app:layout_constraintTop_toTopOf="@+id/cr_right_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/cr_right_tv"/>
+
+        <TextView
+            android:id="@+id/cr_right_tv"
+            android:text=" 美元"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cr_left_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/cr_left_tv"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cr_cl_one"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/shape_f9_10_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cr_left_tv">
+
+            <ImageView
+                android:id="@+id/cr_iv_one"
+                android:layout_width="33dp"
+                android:layout_height="22dp"
+                android:src="@drawable/m_cny"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/cr_tv_one"
+                android:text="人民币"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textColor="#060606"
+                android:textSize="14sp"
+                android:layout_marginStart="7dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cr_iv_one"
+                app:layout_constraintEnd_toStartOf="@+id/cr_iv2"/>
+
+            <ImageView
+                android:id="@+id/cr_iv2"
+                android:src="@drawable/cr_iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/cr_et_one"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:hint="CNY"
+            android:textSize="16dp"
+            android:textColorHint="#D3D3D3"
+            android:textColor="#060606"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="10dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            app:layout_constraintTop_toTopOf="@+id/cr_cl_one"
+            app:layout_constraintBottom_toBottomOf="@+id/cr_cl_one"
+            app:layout_constraintStart_toEndOf="@+id/cr_cl_one"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cr_cl_two"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/shape_f9_10_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cr_cl_one">
+
+            <ImageView
+                android:id="@+id/cr_iv_two"
+                android:layout_width="33dp"
+                android:layout_height="22dp"
+                android:src="@drawable/m_usd"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/cr_tv_two"
+                android:text="美元"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textColor="#060606"
+                android:textSize="14sp"
+                android:layout_marginStart="7dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cr_iv_two"
+                app:layout_constraintEnd_toStartOf="@+id/cr_iv3"/>
+
+            <ImageView
+                android:id="@+id/cr_iv3"
+                android:src="@drawable/cr_iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/cr_et_two"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:hint="USD"
+            android:textSize="16dp"
+            android:textColorHint="#D3D3D3"
+            android:textColor="#060606"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="10dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            app:layout_constraintTop_toTopOf="@+id/cr_cl_two"
+            app:layout_constraintBottom_toBottomOf="@+id/cr_cl_two"
+            app:layout_constraintStart_toEndOf="@+id/cr_cl_two"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_date"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="6dp"
+    android:orientation="vertical">
+
+    <com.necer.view.WeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B91C13"
+        android:paddingVertical="10dp"
+        android:textColor="@color/white" />
+
+    <com.allen.library.shape.ShapeFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        app:shapeCornersBottomLeftRadius="10dp"
+        app:shapeCornersBottomRightRadius="10dp"
+        app:shapeSolidColor="@color/white">
+
+        <com.necer.calendar.Miui10Calendar
+            android:id="@+id/miui10Calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:showNumberBackground="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B91C13" />
+
+        </com.necer.calendar.Miui10Calendar>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/item_calendar_bg_icon" />
+    </com.allen.library.shape.ShapeFrameLayout>
+
+</LinearLayout>

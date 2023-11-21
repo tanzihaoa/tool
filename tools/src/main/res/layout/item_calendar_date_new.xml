@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/cl_date"
+        android:layout_width="44dp"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="11"
+            android:textSize="18sp"
+           />
+
+        <TextView
+            android:id="@+id/tv_lunar_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="初一"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:layout_below="@id/tv_day"/>
+
+        <TextView
+            android:id="@+id/iv_work_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="休"
+            android:textColor="#2EA857"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

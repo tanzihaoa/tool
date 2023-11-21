@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="10dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp">
+
+        <TextView
+            android:id="@+id/tv_formula_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="重力"
+            android:textStyle="bold"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_formula_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="G=mg"
+            android:visibility="gone"
+            android:drawablePadding="5dp"
+            android:textColor="@color/color_666666"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_physics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="14dp">
+
+        <TextView
+            android:id="@+id/tv_hide_formula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G=mg"
+            android:textSize="15sp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/color_666666"/>
+
+        <TextView
+            android:id="@+id/tv_hide_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="备注：m为物体重量，g为比例系数，大小约为9.8N/kg"
+            android:textColor="@color/color_666666"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_lib_top" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身高"
+                        android:textColor="#6F7581"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" (厘米)"
+                        android:textColor="#6F7581"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="13dp"
+                    android:background="@null"
+                    android:hint="请输入身高"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColorHint="#9C9C9C" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_line_bmi" />
+                <!--                <com.allen.library.shape.ShapeConstraintLayout-->
+                <!--                    app:shapeType="line"-->
+                <!--                    app:shapeStrokeColor="#707070"-->
+                <!--                    app:shapeStrokeDashWidth="2dp"-->
+                <!--                    app:shapeStrokeDashGap="2dp"-->
+                <!--                    app:shapeStrokeWidth="1dp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="10dp"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="体重"
+                        android:textColor="#6F7581"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" (千克)"
+                        android:textColor="#6F7581"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="13dp"
+                    android:background="@null"
+                    android:hint="请输入体重"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColorHint="#9C9C9C" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="#707070" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BMI标准"
+                        android:textColor="#6F7581"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="中国标准"
+                        android:textColor="#6F7581"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/but_start_bmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="26dp"
+                    android:background="@drawable/shape_bmi_but"
+                    android:gravity="center"
+                    android:paddingVertical="11dp"
+                    android:text="开始计算"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_bmi_result"
+                    tools:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="21dp"
+                        android:text="计算结果"
+                        android:textColor="#6F7581"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bmi_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="----"
+                        android:textColor="#6F7581"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="14dp"
+                        android:layout_marginTop="20dp"
+                        android:text="BMI指身体质量指数。BMI是用体重(Kg)除以身高(m)的平方得出的数字。由于BMI没有将脂肪率计算在内，所以一个BMI超重的人实际上可能并非肥胖。"
+                        android:textColor="#6F7581"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="14dp"
+                        android:layout_marginTop="39dp"
+                        android:text="BMI值计算公式: BMI = 体重(Kg)/身高(M)的平方"
+                        android:textColor="#444444"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="14dp"
+                        android:layout_marginTop="20dp"
+                        android:text="BMI是国际上常用的衡量人体肥胖程度和是否健康的重要标准。"
+                        android:textColor="#6F7581"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

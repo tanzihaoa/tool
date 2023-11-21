@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="DialogStyle" parent="@android:style/Animation.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">#80000000</item>
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="MyDialogAnimationCenter">
+        <item name="android:windowEnterAnimation">@anim/anim_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_top_out</item>
+    </style>
+
+    <style name="ActivityTheme"  parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="NewADDialogStyle" parent="@android:style/Animation.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+</resources>

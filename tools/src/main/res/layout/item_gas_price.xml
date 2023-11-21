@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_gas_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="主要城市"
+        android:textColor="#ff282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_92"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="92汽油"
+        android:textColor="#ff282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_95"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="95汽油"
+        android:textColor="#ff282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_98"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="98汽油"
+        android:textColor="#ff282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_oil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="柴油"
+        android:textColor="#ff282828"
+        android:textSize="14sp" />
+</LinearLayout>

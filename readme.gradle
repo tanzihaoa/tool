@@ -1,0 +1,35 @@
+//下载对应工具库
+task git_lib_utils() {
+    try {
+        def destination = file("../android-toy-brick")
+        if(!destination.exists()){
+            def cmdGit = "git clone -b master git@gitee.com:beijing-siketike/android-toy-brick.git " + destination.absolutePath + File.separator
+            def procGit = cmdGit.execute()
+            procGit.waitFor()
+            def isUtilFile = file("../android-toy-brick")
+            if(!isUtilFile.exists()){
+                //如果git失败，可能不是服务后台打包，开发人的电脑
+                cmdGit = "git clone -b master https://gitee.com/beijing-siketike/android-toy-brick.git " + destination.absolutePath + File.separator
+                procGit = cmdGit.execute()
+                procGit.waitFor()
+            }
+        }else{
+            //更新工具库
+            def stdout = new ByteArrayOutputStream()
+            if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+                exec {
+                    commandLine "cmd","/c","cd ${destination.absolutePath + File.separator} && git pull origin master"
+                    standardOutput = stdout
+                }
+            }else{
+                exec {
+                    commandLine "/bin/sh","-c","cd ${destination.absolutePath + File.separator} && git pull origin master"
+                    standardOutput = stdout
+                }
+            }
+            print("结果--》" + stdout.toString().trim())
+        }
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+}

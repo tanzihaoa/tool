@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        app:shapeSolidColor="#FFFFFF">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_solar_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="立春" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            tools:text="2021年02月03日" />
+    </com.allen.library.shape.ShapeLinearLayout>
+</layout>

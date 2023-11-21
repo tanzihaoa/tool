@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_lib_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.allen.library.shape.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="12dp"
+        app:shapeCornersRadius="5dp"
+        app:shapeSolidColor="#33333333">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:text="立方米"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:hint=" "
+            android:inputType="numberDecimal"
+            android:minWidth="200dp"
+            android:textColor="#C52C1F"
+            android:textColorHint="#C52C1F"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="m³"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+    </com.allen.library.shape.ShapeConstraintLayout>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:shapeCornersRadius="5dp"
+        app:shapeSolidColor="#33333333">
+
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="立方分米"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="dm³"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="立方厘米"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et3"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="cm³"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv3" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="立方毫米"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et4"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="mm³"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv4" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="升"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et5"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="l"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv5" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="分升"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et6"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="dl"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv6" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="厘升"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et7"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="cl"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv7" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="毫升"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et8"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="ml"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv8" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#C52C1F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:text="立方英尺"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et9"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:gravity="center_vertical|end"
+                android:hint=" "
+                android:inputType="numberDecimal"
+                android:minWidth="200dp"
+                android:textColor="#C52C1F"
+                android:textColorHint="#C52C1F"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="cu ft"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv9" />
+
+
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+    </com.allen.library.shape.ShapeLinearLayout>
+</LinearLayout>

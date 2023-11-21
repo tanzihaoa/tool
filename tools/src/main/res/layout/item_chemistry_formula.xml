@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="14dp">
+
+        <TextView
+            android:id="@+id/tv_formula_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="铁与硫酸铜反应："
+            android:textStyle="bold"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/icon_arrow_gray"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_physics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingHorizontal="14dp">
+
+        <com.allen.library.shape.ShapeTextView
+            android:id="@+id/tv_hide_formula"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Fe+CuSO₄=FeSO₄+Cu"
+            android:layout_marginVertical="5dp"
+            android:gravity="center"
+            app:shapeCornersRadius="4dp"
+            app:shapeStrokeColor="@color/c_8B9099"
+            app:shapeStrokeWidth="1dp"
+            android:textSize="15sp"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/color_666666"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/RED"/>
+
+            <TextView
+                android:id="@+id/tv_hide_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:paddingVertical="5dp"
+                android:text="备注：铁的活动性比铜强，铁与硫酸铜反应生成硫酸亚铁和铜"
+                android:textColor="@color/color_666666"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/icon_duration_calculation_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DurationCalculationActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp">
+
+        <ImageView
+            android:id="@+id/but_back"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_left_util_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="时长计算"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:id="@+id/but_select_duration"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="出生日期"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_select_duration"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="1998年7月21日"
+            android:text="--"
+            android:gravity="center"
+            android:drawableEnd="@mipmap/icon_arrow_blak"
+            android:drawablePadding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+    <TextView
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="12dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:text="计算结果"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="18dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="周岁"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_one_full_year"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="26"
+            android:text="--"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="虚岁"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nominal_age"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="26"
+            android:text="--"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="生肖"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_animal_sign"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="虎"
+            android:text="--"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+    <TextView
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="12dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:text="在世界生存了"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="18dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="年"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_duration_year"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="26"
+            android:text="--"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="月"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_duration_month"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="208"
+            android:text="--"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+    <com.allen.library.shape.ShapeLinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="12dp"
+        app:shapeSolidColor="@android:color/white"
+        app:shapeCornersRadius="11dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:text="天"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_duration_day"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="7876"
+            android:text="--"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.allen.library.shape.ShapeLinearLayout>
+
+</LinearLayout>

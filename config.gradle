@@ -1,0 +1,19 @@
+ext {
+
+    android = [
+            compileSdkVersion        : 32,
+            buildToolsVersion        : "30.0.3",
+            minSdkVersion            : 21,
+            //29及以上无法在应用内控制WiFi
+            targetSdkVersion         : 28
+    ]
+
+    java = [
+            "sourceCompatibility": JavaVersion.VERSION_11,
+            "targetCompatibility": JavaVersion.VERSION_11
+    ]
+
+
+    appName = project.name
+
+}

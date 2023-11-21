@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTheme">#FFC52C1F</color>
+    <color name="white">#ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="colorPrimary">#FFF31B76</color>
+    <color name="color_1C9F48">#1C9F48</color>
+    <color name="cFF2B18">#FF2B18</color>
+    <color name="ksad_gray_9c">#FF9C9C9C</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="transparent">#00000000</color>
+    <color name="dash_board_progress_bg">#FFFFFF</color>
+    <color name="dash_board_meter">#58000000</color>
+    <color name="dash_board_leftRight">#e1dcd6</color>
+    <color name="dash_board_rightRight">#f4efe9</color>
+    <color name="dash_board_outsideBlue">#2690f8</color>
+    <color name="dash_board_insideCircle">#c2b9b0</color>
+    <color name="dash_board_skyblue">#ff87ceeb</color>
+    <color name="dash_board_textColor">#666666</color>
+    <color name="c_8B9099">#8B9099</color>
+    <color name="color_F0F0F0">#F0F0F0</color>
+    <color name="color_BEC4D1">#BEC4D1</color>
+    <color name="color_FF4735">#FF4735</color>
+
+    <color name="shadow">#dfdfdf</color>
+    <color name="leftRight">#e1dcd6</color>
+    <color name="insideCircle">#c2b9b0</color>
+    <color name="rightRight">#f4efe9</color>
+
+    <color name="black">#FF000000</color>
+    <color name="c_66fff">#66FFFFFF</color>
+    <color name="c_99fff">#99FFFFFF</color>
+    <color name="common_text_gray">#999999</color>
+
+</resources>

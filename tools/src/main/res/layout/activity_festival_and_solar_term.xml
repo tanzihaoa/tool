@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#F30213"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="375:88"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_white_utils_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="节日与节气"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_public_vacation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:paddingBottom="17dp"
+                android:text="公众节日"
+                android:textColor="#F30213"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_solar_term"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_solar_term"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:paddingBottom="17dp"
+                android:text="节气"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_public_vacation"
+                app:layout_constraintEnd_toStartOf="@+id/tv_holidays"
+                app:layout_constraintStart_toEndOf="@+id/tv_public_vacation"
+                app:layout_constraintTop_toTopOf="@+id/tv_public_vacation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_holidays"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:paddingBottom="17dp"
+                android:text="节假日"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_solar_term"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_solar_term"
+                app:layout_constraintTop_toTopOf="@+id/tv_solar_term" />
+
+            <com.allen.library.shape.ShapeFrameLayout
+                android:id="@+id/v_indicator"
+                android:layout_width="21dp"
+                android:layout_height="6dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_public_vacation"
+                app:layout_constraintStart_toStartOf="@+id/tv_public_vacation"
+                app:shapeCornersRadius="3dp"
+                app:shapeSizeHeight="6dp"
+                app:shapeSolidColor="#F30213" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#EEEEEE" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</layout>

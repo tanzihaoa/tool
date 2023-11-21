@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.tzh.tachymeter.ui.activity.IpActivity">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/layout_lib_top"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_main"
+            android:layout_width="175dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white"
+            android:src="@drawable/bg_ip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top" />
+
+        <LinearLayout
+            android:id="@+id/ll_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_main">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_ip_left" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前IP地址"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_ip_right" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="113.246.153.108"
+            android:textColor="#ff57f3c9"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@id/ll_ip"
+            app:layout_constraintRight_toRightOf="@id/ll_ip"
+            app:layout_constraintTop_toBottomOf="@id/ll_ip" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="CANADA"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_ip"
+            app:layout_constraintRight_toRightOf="@id/tv_ip"
+            app:layout_constraintTop_toBottomOf="@id/tv_ip" />
+
+        <TextView
+            android:id="@+id/tv_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="其他IP地址"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/ll_check"
+            app:layout_constraintRight_toLeftOf="@id/iv_main"
+            app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_ip_check"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_other">
+
+            <EditText
+                android:id="@+id/et_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入IP地址"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_ip_check_blue"
+                android:paddingStart="30dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:text="查询"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

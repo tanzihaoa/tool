@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.allen.library.shape.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="22dp"
+    app:shapeSolidColor="#2EFFFFFF"
+    app:shapeCornersRadius="14dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_random_number"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:text="1111"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</com.allen.library.shape.ShapeLinearLayout>

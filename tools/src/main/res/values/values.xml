@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="N_allMonthSixLine">false</bool>
+    <bool name="N_lastNextMonthClickEnable">true</bool>
+    <bool name="N_showHolidayWorkday">true</bool>
+    <bool name="N_showLunar">true</bool>
+    <bool name="N_showNumberBackground">false</bool>
+    <bool name="N_stretchCalendarEnable">false</bool>
+    <bool name="N_textBold">false</bool>
+    <color name="N_defaultLunarTextColor">#AEAEAE</color>
+    <color name="N_defaultSolarTextColor">#444444</color>
+    <color name="N_holidayTextColor">#39AF81</color>
+    <color name="N_hollowCircleColor">#B2B2B2</color>
+    <color name="N_pointColor">#B2B2B2</color>
+    <color name="N_solidCircleColor">#39AF81</color>
+    <color name="N_stretchTextColor">#666666</color>
+    <color name="N_todayCheckedColor">#39AF81</color>
+    <color name="N_todaySolarUnCheckedTextColor">#39AF81</color>
+    <color name="N_white">#ffffff</color>
+    <color name="N_workdayTextColor">#EC7230</color>
+    <dimen name="N_calendarHeight">300dp</dimen>
+    <dimen name="N_checkedCircleRadius">44dp</dimen>
+    <dimen name="N_checkedHollowCircleStroke">1dp</dimen>
+    <dimen name="N_holidayWorkdayDistance">15dp</dimen>
+    <dimen name="N_holidayWorkdayTextSize">10sp</dimen>
+    <dimen name="N_lunarDistance">15dp</dimen>
+    <dimen name="N_lunarTextSize">10sp</dimen>
+    <dimen name="N_numberBackgroundTextSize">260sp</dimen>
+    <dimen name="N_pointDistance">18dp</dimen>
+    <dimen name="N_pointSize">5dp</dimen>
+    <dimen name="N_solarTextSize">18sp</dimen>
+    <dimen name="N_stretchCalendarHeight">450dp</dimen>
+    <dimen name="N_stretchTextDistance">32dp</dimen>
+    <dimen name="N_stretchTextSize">10sp</dimen>
+    <item name="N_monthCalendar" type="id"/>
+    <item name="N_weekCalendar" type="id"/>
+    <integer name="N_animationDuration">240</integer>
+    <integer name="N_disabledAlphaColor">50</integer>
+    <integer name="N_lastNextMothAlphaColor">90</integer>
+    <integer name="N_numberBackgroundAlphaColor">50</integer>
+    <string name="N_NCalendar_calendar_background_illegal">折叠日历不能使用此方法</string>
+    <string name="N_NCalendar_child_num">NCalendar中的有且只能有一个直接子view</string>
+    <string name="N_NCalendar_set_calendar_background_illegal">折叠日历请调用setMonthCalendarBackground()和setWeekCalendarBackground()</string>
+    <string name="N_calendarState_illegal">不允许直接设置成CalendarState.MONTH_STRETCH，可以设置成CalendarState.WEEK或者CalendarState.MONTH</string>
+    <string name="N_date_format_illegal">需要 yyyy-MM-dd 格式的日期</string>
+    <string name="N_date_format_jump">jumpDate的参数需要正确的年月日数据</string>
+    <string name="N_disabledString">日期超出许可范围</string>
+    <string name="N_end_after_20991231">endDate必须在2099-12-31之前</string>
+    <string name="N_factual_scroll_view">factual_scroll_view</string>
+    <string name="N_holidayText">休</string>
+    <string name="N_initialize_date_illegal">日期区间必须包含初始化日期</string>
+    <string name="N_set_checked_dates_count_illegal">设置的日期数量和MultipleCountModel冲突</string>
+    <string name="N_set_checked_dates_illegal">只能多选模式下才能使用此方法</string>
+    <string name="N_start_after_end">startDate必须在endDate之前</string>
+    <string name="N_start_before_19010101">startDate必须在1901-01-01之后</string>
+    <string name="N_stretch_month_height">日历拉伸之后的高度必须大于正常高度，日历默认的正常高度为300dp</string>
+    <string name="N_workdayText">班</string>
+    <string name="app_name">calendar</string>
+    <declare-styleable name="NCalendar">
+
+        <attr format="dimension" name="solarTextSize"/>
+        <attr format="boolean" name="solarTextBold"/>
+        <attr format="color" name="todayCheckedSolarTextColor"/>
+        <attr format="color" name="todayUnCheckedSolarTextColor"/>
+        <attr format="color" name="defaultCheckedSolarTextColor"/>
+        <attr format="color" name="defaultUnCheckedSolarTextColor"/>
+
+        <attr format="boolean" name="showLunar"/>
+        <attr format="color" name="todayCheckedLunarTextColor"/>
+        <attr format="color" name="todayUnCheckedLunarTextColor"/>
+        <attr format="color" name="defaultCheckedLunarTextColor"/>
+        <attr format="color" name="defaultUnCheckedLunarTextColor"/>
+        <attr format="dimension" name="lunarTextSize"/>
+        <attr format="boolean" name="lunarTextBold"/>
+        <attr format="dimension" name="lunarDistance"/>
+
+
+        <attr format="dimension" name="pointSize"/>
+        <attr format="dimension" name="pointDistance"/>
+        <attr format="reference" name="todayCheckedPoint"/>
+        <attr format="reference" name="todayUnCheckedPoint"/>
+        <attr format="reference" name="defaultCheckedPoint"/>
+        <attr format="reference" name="defaultUnCheckedPoint"/>
+
+        <attr format="reference" name="todayCheckedHoliday"/>
+        <attr format="reference" name="todayUnCheckedHoliday"/>
+        <attr format="reference" name="defaultCheckedHoliday"/>
+        <attr format="reference" name="defaultUnCheckedHoliday"/>
+
+        <attr format="reference" name="todayCheckedWorkday"/>
+        <attr format="reference" name="todayUnCheckedWorkday"/>
+        <attr format="reference" name="defaultCheckedWorkday"/>
+        <attr format="reference" name="defaultUnCheckedWorkday"/>
+
+        <attr format="reference" name="calendarBackground"/>
+
+
+        <attr format="string" name="holidayText"/>
+        <attr format="string" name="workdayText"/>
+        <attr format="boolean" name="holidayWorkdayTextBold"/>
+        <attr format="dimension" name="holidayWorkdayTextSize"/>
+        <attr format="dimension" name="holidayWorkdayDistance"/>
+        <attr format="color" name="todayCheckedHolidayTextColor"/>
+        <attr format="color" name="todayUnCheckedHolidayTextColor"/>
+        <attr format="color" name="defaultCheckedHolidayTextColor"/>
+        <attr format="color" name="defaultUnCheckedHolidayTextColor"/>
+        <attr format="color" name="todayCheckedWorkdayTextColor"/>
+        <attr format="color" name="todayUnCheckedWorkdayTextColor"/>
+        <attr format="color" name="defaultCheckedWorkdayTextColor"/>
+        <attr format="color" name="defaultUnCheckedWorkdayTextColor"/>
+
+
+        <attr format="string" name="disabledString"/>
+
+        <attr format="dimension" name="calendarHeight"/>
+        <attr format="dimension" name="stretchCalendarHeight"/>
+        <attr format="boolean" name="stretchCalendarEnable"/>
+        <attr format="integer" name="animationDuration"/>
+
+        <attr format="integer" name="lastNextMothAlphaColor"/>
+        <attr format="integer" name="disabledAlphaColor"/>
+
+
+        <attr format="boolean" name="showHoliday"/>
+        <attr format="boolean" name="allMonthSixLine"/>
+        <attr format="boolean" name="lastNextMonthClickEnable"/>
+        <attr format="color" name="disabledColor"/>
+
+        <attr format="enum" name="defaultCalendar">
+            <enum name="week" value="100"/>
+            <enum name="month" value="101"/>
+        </attr>
+
+        <attr format="enum" name="pointLocation">
+            <enum name="up" value="200"/>
+            <enum name="down" value="201"/>
+        </attr>
+
+        <attr format="enum" name="firstDayOfWeek">
+            <enum name="sunday" value="300"/>
+            <enum name="monday" value="301"/>
+        </attr>
+
+        <attr format="enum" name="holidayWorkdayLocation">
+            <enum name="top_right" value="400"/>
+            <enum name="top_left" value="401"/>
+            <enum name="bottom_right" value="402"/>
+            <enum name="bottom_left" value="403"/>
+        </attr>
+
+        <attr format="dimension" name="stretchTextSize"/>
+        <attr format="boolean" name="stretchTextBold"/>
+        <attr format="dimension" name="stretchTextDistance"/>
+        <attr format="color" name="stretchTextColor"/>
+
+
+        <attr format="boolean" name="showNumberBackground"/>
+        <attr format="dimension" name="numberBackgroundTextSize"/>
+        <attr format="color" name="numberBackgroundTextColor"/>
+        <attr format="integer" name="numberBackgroundAlphaColor"/>
+
+
+        <attr format="reference" name="defaultCheckedBackground"/>
+        <attr format="reference" name="todayCheckedBackground"/>
+
+    </declare-styleable>
+
+    <string-array name="ping_num">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+    </string-array>
+
+</resources>

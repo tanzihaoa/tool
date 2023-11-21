@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.tzh.tachymeter.ui.activity.PingActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_color_title"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <FrameLayout
+                android:id="@+id/but_title_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_left_in_white" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_title_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:paddingVertical="15dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="这是个标题" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="15dp">
+
+
+                <ImageView
+                    android:id="@+id/but_title_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_ping_1" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.tzh.tools.view.MyDashboardView
+                        android:id="@+id/ping_dashboard"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:backgroundColor="@color/transparent"
+                        app:centerCircleColor="@color/transparent"
+                        app:endProgressColor="#FFFFB800"
+                        app:maxNumber="80"
+                        app:progressColor="@color/colorPrimary"
+                        app:progressStrokeWidth="10dp"
+                        app:startProgressColor="#FF00CEFF"
+                        app:textColor="@color/white"
+                        app:tikeStrArray="@array/ping_num"
+                        app:tikeStrColor="#B8BED5"
+                        app:tikeStrSize="9sp"
+                        app:unit="/ms" />
+
+                    <TextView
+                        android:id="@+id/tv_ping_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        tools:text="网络良好" />
+
+                    <TextView
+                        android:id="@+id/tv_ping_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        tools:text="www.baidu.com" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ping_chart"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="12dp"
+                        android:layout_height="120dp"
+                        android:visibility="gone"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_ping_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingVertical="12dp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:background="@drawable/shape_wifi_testing_purple"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_ping"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                tools:text="0.0%" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4.5dp"
+                                android:text="@string/ping_3"
+                                android:textColor="#CCFFFFFF"
+                                android:textSize="12sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent" />
+-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:background="@drawable/shape_wifi_testing_purple"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_put_ping"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                tools:text="0.0%" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4.5dp"
+                                android:text="@string/ping_4"
+                                android:textColor="#CCFFFFFF"
+                                android:textSize="12sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:background="@drawable/shape_wifi_testing_purple"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_red_ping"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                tools:text="0.0%" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4.5dp"
+                                android:text="@string/ping_5"
+                                android:textColor="#CCFFFFFF"
+                                android:textSize="12sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:id="@+id/but_start_ping"
+                    android:layout_width="220dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/shape_c_primary_20"
+                    android:gravity="center"
+                    android:textColor="#FF1853FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="这是一个测试" />
+                <!--输入框-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/edit_ping_url_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请输入需要测试Ping的地址"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_ping_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:paddingStart="10sp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/shape_ff8578ff_22"
+                        android:hint="请输入"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="#66FFFFFF"
+                        android:textColor="@color/white"
+                        tools:ignore="RtlSymmetry" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

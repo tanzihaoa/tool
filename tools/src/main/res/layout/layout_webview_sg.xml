@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_adpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_sgad_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sg_back" />
+
+        <ImageView
+            android:id="@+id/iv_web_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_sgad_back"
+            android:src="@drawable/icon_web_close" />
+
+        <TextView
+            android:id="@+id/tv_sgad_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="150dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#808080"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_sgad_progress"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

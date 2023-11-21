@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_clean_page"
+        tools:context=".ui.activity.AboutUsActivity">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/layout_top_bar" />
+
+        <FrameLayout
+            android:id="@+id/fl_outer"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lv_content"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="saomao.json"
+                app:lottie_repeatCount="-1" />
+
+            <ImageView
+                android:id="@+id/iv_net_state"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@mipmap/ic_net_success"/>
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_nw"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_white_top_list_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_outer">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/lv_content">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/network_set"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="网络设置"
+                    android:textColor="#36383E"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_content"
+                    app:layout_constraintLeft_toRightOf="@id/iv_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_icon" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="unknown ssid"
+                    android:textColor="#ff8b9099"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_icon"
+                    app:layout_constraintLeft_toRightOf="@id/iv_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+                <ImageView
+                    android:id="@+id/iv_rotation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_rotation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="连接正常"
+                    android:textColor="#FF006CFF"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_set">
+
+                <ImageView
+                    android:id="@+id/iv_icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/network_wifi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="网络信号强度"
+                    android:textColor="#36383E"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_content2"
+                    app:layout_constraintLeft_toRightOf="@id/iv_icon2"
+                    app:layout_constraintTop_toTopOf="@id/iv_icon2" />
+
+                <TextView
+                    android:id="@+id/tv_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="0dBm"
+                    android:textColor="#ff8b9099"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_icon2"
+                    app:layout_constraintLeft_toRightOf="@id/iv_icon2"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name2" />
+
+                <ImageView
+                    android:id="@+id/iv_rotation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_rotation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_result2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="网络正常"
+                    android:textColor="#FF006CFF"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_devices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_wifi">
+
+                <ImageView
+                    android:id="@+id/iv_icon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/network_devices"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="网络连通性"
+                    android:textColor="#36383E"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_content3"
+                    app:layout_constraintLeft_toRightOf="@id/iv_icon3"
+                    app:layout_constraintTop_toTopOf="@id/iv_icon3" />
+
+                <TextView
+                    android:id="@+id/tv_content3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="网络延迟25ms"
+                    android:textColor="#ff8b9099"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_icon3"
+                    app:layout_constraintLeft_toRightOf="@id/iv_icon3"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name3" />
+
+                <ImageView
+                    android:id="@+id/iv_rotation3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_rotation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_result3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="网络正常"
+                    android:textColor="#FF006CFF"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:id="@+id/tv_restart"
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="120dp"
+            android:background="@drawable/shape_signal_testing"
+            android:gravity="center"
+            android:text="重新检测"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

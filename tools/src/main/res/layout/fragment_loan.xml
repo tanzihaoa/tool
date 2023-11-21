@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.TempFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_shape_tools_top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_tool_loan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="公积金贷款计算"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_loan_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:hint="请输入您的贷款总额(万)"
+                    android:textSize="13dp"
+                    android:background="@null"
+                    android:textColorHint="#D3D3D3"
+                    android:textColor="#060606"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="10dp"
+                    android:inputType="number"/>
+                <View
+                    android:background="#F2F3F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_below="@+id/tv_tool_loan_type"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <RelativeLayout
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="还款方式"
+                    android:textColor="#ff8f98a7"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_tool_loan_type"
+                    android:text="等额本息(每月等额还款)"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/iv_right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:background="#F2F3F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/tv_tool_loan_type"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="还款年数"
+                    android:textColor="#ff8f98a7"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_tool_loan_time"
+                    android:text="5年(60个月)"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/iv_right2"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/iv_right2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:background="#F2F3F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/tv_tool_loan_time"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="公积金贷款利率"
+                    android:textColor="#ff8f98a7"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_tool_loan_rate"
+                    android:text="基准利率(3.25%)"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/iv_right3"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/iv_right3"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:background="#F2F3F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/tv_tool_loan_rate"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_start_loan"
+                android:layout_width="280dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_tool_loan"
+                android:gravity="center"
+                android:text="开始计算"
+                android:textColor="#ffffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>

@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="lc_tips1"><font color="#FBBE2B">每月还款金额不变</font><font color="#000000">，其中还款的本金逐月递增，利息逐月递减</font></string>
+    <string name="lc_tips2"><font color="#FBBE2B">每月还款金额递减</font><font color="#000000">，其中每月还款的本金不变，利息逐月减少</font></string>
+
+    <string name="ping_1">Ping测试</string>
+    <string name="ping_2">请输入需要测试Ping的地址</string>
+    <string name="ping_3">丢失率</string>
+    <string name="ping_4">已发送</string>
+    <string name="ping_5">已接收</string>
+    <string name="ping_6">Ping历史记录</string>
+    <string name="ping_7">时间</string>
+    <string name="ping_8">丢失率</string>
+    <string name="ping_9">已发送</string>
+    <string name="ping_10">已接收</string>
+    <string name="ping_11">最高/平均/最低</string>
+    <string name="ping_12">温馨提示</string>
+    <string name="ping_13">是否删除所有数据</string>
+    <string name="ping_14">取消</string>
+    <string name="ping_15">确定</string>
+
+    <string name="dialog_tips">一般来说，网络的延迟Ping值越低，速度会越快；以下是ping网络延迟的相关参考数据：\n
+        1-30ms：速度极快，几乎察觉不出有延迟，玩任何网络速度都特别顺畅；\n
+        31-50ms：速度良好，可以正常浏览网页，没有明显的延迟情况；\n
+        51-100ms：速度普通，对抗类游戏在一定水平以上能感觉出延迟，偶尔感觉到停顿；\n
+        100ms-200ms：速度较差，无法正常游玩对抗类游戏，有明显的卡顿现象，偶尔出现丢包和掉线现象。
+    </string>
+
+    <string name="fraud_guide_tips"><font color="#000000">近年来，随着互联网的迅速发展，网络诈骗分子的诈骗手段层出不穷，包括电话诈骗、微信诈骗、QQ诈骗、短信诈骗等。为此，特别整理了13条常见诈骗手段，</font><font color="#FF2C2C">提醒广大用户谨防诈骗，保障财产安全。</font></string>
+    <string name="fraud_guide">\n1、说给你打钱反而让你先打钱的，都是诈骗\n
+2、自称公检法要求汇款的，都是诈骗\n
+3、叫你汇款到“安全账户”的，都是诈骗\n
+4、通知“家属”出事先要汇款的，都是诈骗\n
+5、在电话中索要银行卡信息的，都是诈骗\n
+6、叫你开通网银接受检查的，都是诈骗\n
+7、叫你登录网站查看通缉令的，都是诈骗\n
+8、自称“领导（老板)”要求汇款的，都是诈骗\n
+9、陌生网站（链接）要求登记银行卡信息的，都是诈骗\n
+10、网上交友要求转账，都是诈骗\n
+11、网络贷款要求先打钱再放款的，都是诈骗\n
+12、花呗套现刷额度的，都是诈骗\n
+13、网络上教你赚线的，都是诈骗\n
+14、网络博彩，网络彩票，都是诈骗\n
+骗子行骗手段层出不穷，让人防不胜防。但是只要大家牢记一点：骗子无论使用什么手段，落脚点都会回到“钱”上，只要提到借钱、汇款、转账或提供银行卡信息的，一定要加倍小心，提高警惕。
+    </string>
+</resources>

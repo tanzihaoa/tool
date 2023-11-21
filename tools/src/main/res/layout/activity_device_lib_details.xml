@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_dd_bg"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/dd_top"
+            layout="@layout/layout_lib_white_top"
+            android:background="#00000000" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dd_top">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="166dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_device_item_bg">
+
+                    <ImageView
+                        android:id="@+id/dd_baseInfo_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/devicedetails1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="基本信息"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dd_baseInfo_img1"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img1"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_baseInfo_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/devicedetails6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_baseInfo_img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="72dp"
+                        android:src="@drawable/devicedetails7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_img2" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_ResolutionH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1080"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_Resolutionx"
+                        app:layout_constraintEnd_toStartOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_Resolutionx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_ResolutionW"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_baseInfo_ResolutionH"
+                        app:layout_constraintStart_toStartOf="@+id/dd_baseInfo_ResolutionH"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_ResolutionH"/>
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_ResolutionW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="720"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_txt1"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_baseInfo_Resolutionx"
+                        app:layout_constraintStart_toStartOf="@+id/dd_baseInfo_Resolutionx"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_Resolutionx"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="屏幕分辨率"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_baseInfo_ResolutionW"
+                        app:layout_constraintStart_toStartOf="@+id/dd_baseInfo_ResolutionW"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_ResolutionW" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="设备厂商:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_txt3"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="型号名称:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_txt4"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="安卓版本:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_txt5"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="处理器架构:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_txt6"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_txt4" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="设备开机:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_baseInfo_txt7"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_txt5" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="ROM版本:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_baseInfo_txt6" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_firm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_txt4" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_cpu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_txt5"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_txt5" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_txt6"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_txt6" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_Rom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_baseInfo_txt7"
+                        app:layout_constraintTop_toTopOf="@+id/dd_baseInfo_txt7" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_device_item_bg">
+
+                    <ImageView
+                        android:id="@+id/dd_network_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/devicedetails2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="网络信息"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dd_network_img1"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_img1"
+                        app:layout_constraintTop_toTopOf="@+id/dd_network_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_network_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/devicedetails6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_network_img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="72dp"
+                        android:src="@drawable/devicedetails7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_img2" />
+
+                    <TextView
+                        android:id="@+id/dd_network_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WIFI"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_network_txt1"
+                        app:layout_constraintEnd_toStartOf="@+id/dd_network_img3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_network_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="网络类型"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_network_type"
+                        app:layout_constraintStart_toStartOf="@+id/dd_network_type"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_type" />
+
+                    <TextView
+                        android:id="@+id/dd_network_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="上传速度:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_network_txt3"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_network_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="下载速度:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_network_txt4"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_network_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="内网地址:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_network_txt3" />
+
+
+                    <TextView
+                        android:id="@+id/dd_network_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="测试中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/dd_network_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="测试中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/dd_network_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_baseInfo_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="测试中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_network_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/dd_network_txt4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_device_item_bg">
+
+                    <ImageView
+                        android:id="@+id/dd_ram_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/devicedetails3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="运行内存信息"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dd_ram_img1"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_img1"
+                        app:layout_constraintTop_toTopOf="@+id/dd_ram_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_ram_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/devicedetails6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_ram_img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="72dp"
+                        android:src="@drawable/devicedetails7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_img2" />
+
+                    <TextView
+                        android:id="@+id/dd_ram_lave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50%"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_ram_txt1"
+                        app:layout_constraintEnd_toStartOf="@+id/dd_ram_img3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_ram_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="内存使用率"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_ram_lave"
+                        app:layout_constraintStart_toStartOf="@+id/dd_ram_lave"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_lave" />
+
+                    <TextView
+                        android:id="@+id/dd_ram_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="内存容量:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_ram_txt3"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_ram_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="联动内存:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_ram_txt4"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_ram_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="内存空闲:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_ram_txt3" />
+
+
+                    <TextView
+                        android:id="@+id/dd_ram1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/dd_ram_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_ram2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/dd_ram_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_ram3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_ram_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/dd_ram_txt4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="131dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_device_item_bg">
+
+                    <ImageView
+                        android:id="@+id/dd_battery_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/devicedetails4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="电池信息"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dd_battery_img1"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_img1"
+                        app:layout_constraintTop_toTopOf="@+id/dd_battery_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_battery_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/devicedetails6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_battery_img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="72dp"
+                        android:src="@drawable/devicedetails7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_img2" />
+
+                    <TextView
+                        android:id="@+id/dd_battery_lave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50%"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_battery_txt1"
+                        app:layout_constraintEnd_toStartOf="@+id/dd_battery_img3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_battery_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="剩余电量"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_battery_lave"
+                        app:layout_constraintStart_toStartOf="@+id/dd_battery_lave"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_lave" />
+
+                    <TextView
+                        android:id="@+id/dd_battery_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="电池温度:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_battery_txt3"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_battery_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="电池健康:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_battery_txt4"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_battery_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="电池电压:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_battery_txt5"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_battery_txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="电池状态:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_battery_txt4" />
+
+                    <TextView
+                        android:id="@+id/dd_battery1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/dd_battery_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_battery2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/dd_battery_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_battery3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/dd_battery_txt4" />
+
+                    <TextView
+                        android:id="@+id/dd_battery4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_battery_txt5"
+                        app:layout_constraintTop_toTopOf="@+id/dd_battery_txt5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/shape_device_item_bg">
+
+                    <ImageView
+                        android:id="@+id/dd_sd_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/devicedetails5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="储存信息"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/dd_sd_img1"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_img1"
+                        app:layout_constraintTop_toTopOf="@+id/dd_sd_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_sd_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/devicedetails6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_img1" />
+
+                    <ImageView
+                        android:id="@+id/dd_sd_img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="72dp"
+                        android:src="@drawable/devicedetails7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_img2" />
+
+                    <TextView
+                        android:id="@+id/dd_sd_lave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50%"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_sd_txt1"
+                        app:layout_constraintEnd_toStartOf="@+id/dd_sd_img3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_sd_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="剩余使用空间"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/dd_sd_lave"
+                        app:layout_constraintStart_toStartOf="@+id/dd_sd_lave"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_lave" />
+
+                    <TextView
+                        android:id="@+id/dd_sd_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="存储总容量:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_sd_txt3"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_img2"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/dd_sd_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="已使用容量:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/dd_sd_txt4"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_sd_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="可使用容量:"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_img3"
+                        app:layout_constraintTop_toBottomOf="@+id/dd_sd_txt3" />
+
+
+                    <TextView
+                        android:id="@+id/dd_sd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/dd_sd_txt2" />
+
+                    <TextView
+                        android:id="@+id/dd_sd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/dd_sd_txt3" />
+
+                    <TextView
+                        android:id="@+id/dd_sd3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="读取中"
+                        android:textColor="@color/c_8B9099"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/dd_sd_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/dd_sd_txt4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

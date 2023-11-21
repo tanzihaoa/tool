@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="ArcProgressView">
+        <attr name="desc" format="string|reference" />
+        <attr name="desc_font_size" format="dimension|reference" />
+        <attr name="percent_font_size" format="dimension|reference" />
+        <attr name="background_bg" format="reference" />
+        <attr name="indicator_bg" format="reference" />
+        <attr name="startAngle" format="float|reference" />
+    </declare-styleable>
+
+</resources>

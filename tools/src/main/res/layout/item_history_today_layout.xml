@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="历史上的今天"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.allen.library.shape.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:shapeCornersRadius="14dp"
+        app:shapeSolidColor="#1A1A33">
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_history_today_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="07月17日"
+            android:visibility="gone"
+            android:textColor="#ff333333"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/indicateView"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:id="@+id/cl_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_history_today_date">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_vertical|start"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_history_today_data1_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_history_today_data1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="#C4C4C4"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+
+
+
+        <com.allen.library.shape.ShapeConstraintLayout
+            android:id="@+id/shapeConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_vertical|start"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_history_today_data2_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_history_today_data2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="#C4C4C4"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+
+
+        </com.allen.library.shape.ShapeConstraintLayout>
+
+
+
+
+
+    </com.allen.library.shape.ShapeConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

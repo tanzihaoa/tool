@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#C2EEF7"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RandomNumberActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp">
+
+        <ImageView
+            android:id="@+id/but_back"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_left_util_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="随机数生成"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/random_list"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+
+            <com.allen.library.shape.ShapeLinearLayout
+                android:layout_marginBottom="55dp"
+                android:layout_marginTop="33dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="20dp"
+                android:layout_marginHorizontal="15dp"
+                app:shapeSolidColor="#FFFFFF"
+                app:shapeCornersRadius="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginEnd="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:text="随机数范围"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:background="@drawable/random_number_btn_bg_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:minWidth="78dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ed_random_start"
+                            android:text="0"
+                            android:inputType="number"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/black"
+                            android:background="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginHorizontal="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:text="～"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:minWidth="78dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:background="@drawable/random_number_btn_bg_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ed_random_end"
+                            android:text="1999"
+                            android:inputType="number"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/black"
+                            android:background="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginVertical="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginEnd="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:text="随机数个数"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:minWidth="78dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:background="@drawable/random_number_btn_bg_shape"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ed_random_number"
+                            android:text="3"
+                            android:inputType="number"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/black"
+                            android:background="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginEnd="13dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:text="是否唯一  "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:background="@drawable/random_number_btn_bg_shape"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/but_random_number_yes"
+                            android:paddingHorizontal="15dp"
+                            android:paddingVertical="3dp"
+                            android:text="是"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/but_random_number_no"
+                            android:paddingHorizontal="15dp"
+                            android:paddingVertical="3dp"
+                            android:background="@drawable/random_number_btn_bg_shape2"
+                            android:text="否"
+                            android:textSize="15sp"
+                            android:textColor="#009DFF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.allen.library.shape.ShapeTextView
+                    android:id="@+id/but_random_number"
+                    android:layout_marginTop="34dp"
+                    android:paddingVertical="10dp"
+                    android:gravity="center"
+                    app:shapeCornersRadius="23dp"
+                    app:shapeGradientAngle="left_right"
+                    app:shapeGradientEndColor="#64D5EC"
+                    app:shapeGradientStartColor="#C2EEF7"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:text="生成随机数"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.allen.library.shape.ShapeLinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:id="@+id/ll_adpage"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/web_top"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_left_util_black" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="设置"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </FrameLayout>
+        <ProgressBar
+            android:id="@+id/pb_sgad_progress"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+</layout>

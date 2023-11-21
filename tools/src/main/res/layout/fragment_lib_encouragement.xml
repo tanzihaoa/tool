@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.TempFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="12dp"
+            android:background="@drawable/bg_shape_tools_encouragement"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="励志名言"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/but_refresh_encouragement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/icon_refresh_encouragement"
+                    android:text="换一换"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/icon_encouragement"
+                    android:scaleType="fitXY"
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"/>
+
+                <FrameLayout
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/icon_encouragement_2"
+                        android:scaleType="fitXY"
+                        android:layout_width="46dp"
+                        android:layout_height="40dp"/>
+
+                    <TextView
+                        android:id="@+id/but_refresh_body"
+                        android:layout_gravity="center"
+                        android:textColor="#654248"
+                        android:textSize="16sp"
+                        android:text="111111111111111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>

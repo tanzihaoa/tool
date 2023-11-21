@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.DataCountActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:src="@drawable/ic_left_util_black" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_back"
+                android:layout_alignBottom="@id/iv_back"
+                android:gravity="center"
+                android:text="日期计算"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:text="开始时间"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_top" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:drawableRight="@drawable/ic_right_red"
+            android:text="%s年%s月%s日"
+            android:textColor="#ffff0400"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_start_time"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_start_time" />
+
+
+        <TextView
+            android:id="@+id/tv_result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="间隔天数"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_start_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_start_time" />
+
+        <EditText
+            android:textColorHint="#FF0400"
+            android:id="@+id/et_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:maxLines="1"
+            android:maxLength="6"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:background="@null"
+            android:gravity="end"
+            android:hint="输入天数"
+            android:textColor="#FF0400"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_result_title"
+            app:layout_constraintLeft_toRightOf="@id/tv_result_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_result_title" />
+
+        <TextView
+            android:id="@+id/tv_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="计算结果"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_result_title"
+            app:layout_constraintTop_toBottomOf="@id/et_time" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="2022年09月08日"
+            android:textColor="#ffff0400"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_result_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_result_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".module.calendar.view.TodayInHistoryActivity">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTheme"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/v_status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_back_black"
+                    android:tint="#000000"
+                    app:tint="#FFFFFF" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="限行规则"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_car"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/icon_car"
+                    app:layout_constraintDimensionRatio="750:510"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.allen.library.shape.ShapeFrameLayout
+                    android:id="@+id/fl_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_car"
+                    app:layout_constraintStart_toStartOf="@+id/iv_car"
+                    app:layout_constraintTop_toTopOf="@+id/iv_car"
+                    app:shapeCornersRadius="12dp"
+                    app:shapeStrokeColor="#FFFFFF"
+                    app:shapeStrokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="80dp"
+                        android:minHeight="80dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="58sp"
+                        tools:text="1634535345" />
+
+                </com.allen.library.shape.ShapeFrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_today_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#FEFEFE"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/fl_day"
+                    app:layout_constraintStart_toStartOf="@+id/fl_day"
+                    app:layout_constraintTop_toBottomOf="@+id/fl_day"
+                    tools:text="— 2022.01.24 —" />
+
+                <LinearLayout
+                    android:id="@+id/ll_date_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/ll_date_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_today_date">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date_1_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        tools:text="不限行" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        tools:text="01月25日" />
+
+                    <com.allen.library.shape.ShapeFrameLayout
+                        android:layout_width="20dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="8dp"
+                        app:shapeCornersRadius="30dp"
+                        app:shapeSolidColor="@color/colorTheme" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_date_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/ll_date_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ll_date_1"
+                    app:layout_constraintTop_toTopOf="@+id/ll_date_1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date_2_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        tools:text="不限行" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        tools:text="01月26日" />
+
+                    <com.allen.library.shape.ShapeFrameLayout
+                        android:layout_width="20dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="8dp"
+                        app:shapeCornersRadius="30dp"
+                        app:shapeSolidColor="@color/colorTheme" />
+
+                </LinearLayout>
+
+
+                <com.allen.library.shape.ShapeFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_car"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_car"
+                    app:layout_constraintStart_toStartOf="@+id/iv_car"
+                    app:shapeCornersTopLeftRadius="20dp"
+                    app:shapeCornersTopRightRadius="20dp"
+                    app:shapeSizeHeight="20dp"
+                    app:shapeSolidColor="#FFFFFF" />
+
+                <com.allen.library.shape.ShapeLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_car">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="限行规则"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="28dp"
+                        android:textColor="#666666"
+                        android:textSize="16sp"
+                        tools:text="中华人民共和国和以色列国建交联合公报是 由以色列在1992年01月24日，于北京签定的 条约。中华人民共和国和以色列国建交联合公 由以色列在1992年01月24日，于北京签定的 条约。中华人民共和国和以色列国建交联合公 由以色列在1992年01月24日，于北京签定的 条约。中华人民共和国和以色列国建交联合公 由以色列在1992年01月24日，于北京签定的 条约。中华人民共和国和以色列国建交联合公 由以色列在1992年01月24日，于北京签定的 条约。中华人民共和国和以色列国建交联合公 由以色列在1992年01月24日，于北京签定的 条约。中华人民共和国和以色列国建交联合公 由以色列在1992年01月24日，于北京签定的 条约。" />
+
+                </com.allen.library.shape.ShapeLinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_clean_page"
+        tools:context=".activity.NoiseCheckLibActivity">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/layout_top_bar" />
+
+        <com.tzh.tools.view.MyDashboardView
+            android:id="@+id/nc_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top"
+            app:progressStrokeWidth="10dp"
+            android:textSize="14sp"
+            app:textColor="@color/white"
+            app:progressColor="#2C39FA"
+            app:startProgressColor="#FF00CEFF"
+            app:maxNumber="160" />
+
+
+        <TextView
+            android:id="@+id/db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="DB/分贝"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nc_dashboard"
+            app:layout_constraintEnd_toEndOf="@+id/nc_dashboard"
+            app:layout_constraintStart_toStartOf="@+id/nc_dashboard" />
+
+        <TextView
+            android:id="@+id/nc_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/db"
+            app:layout_constraintEnd_toEndOf="@+id/db"
+            app:layout_constraintStart_toStartOf="@id/db" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nc_dashboard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/shape_wifi_testing_purple">
+
+                <TextView
+                    android:id="@+id/nc_db0_20"
+                    android:text="非常安静的环境  （000-020db）"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingVertical="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/nc_db2_60"
+                    android:text="普通的室内谈话  （020-060db）"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingVertical="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nc_db0_20"/>
+
+
+                <TextView
+                    android:id="@+id/nc_db6_80"
+                    android:text="嘈杂的工作环境  （060-080db）"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingVertical="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nc_db2_60"/>
+
+
+                <TextView
+                    android:id="@+id/nc_db8_120"
+                    android:text="可能使听力受损  （080-120db）"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingVertical="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nc_db6_80"/>
+
+
+                <TextView
+                    android:id="@+id/nc_db12_160"
+                    android:text="神经细胞被破坏  （140-160db）"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingVertical="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nc_db8_120"/>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/nc_db12_160"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

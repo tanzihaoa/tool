@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_wifi_guard"
+        tools:context=".ui.wifi.activity.SpeedTestActivity">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/include_title_bar_black" />
+
+
+        <com.tzh.tools.customview.dashboard.ArcProgressView
+            android:id="@+id/dash_board_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:background_bg="@drawable/bg_speed_test"
+            app:indicator_bg="@drawable/center_speed_test_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_bar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/dash_board_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dash_board_view">
+
+            <TextView
+                android:id="@+id/tv_current_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textColor="#ff000000"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="5dp"
+                android:text="kb/s"
+                android:textColor="#ff666666"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_start">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="网络延时"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_network_delay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="--"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下载速度"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_download_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="--/s"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传速度"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_upload_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="--/s"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检测中..."
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dash_board_view" />
+
+        <TextView
+            android:id="@+id/tv_current_wifi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="%s正在测速中"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_test_name"
+            app:layout_constraintRight_toRightOf="@id/tv_test_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_test_name" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_speed_btn"
+            android:id="@+id/tv_start"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="立即检测"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_current_wifi_name" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/common_white_corner_11dp_bg_shape"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_result">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+                    <LinearLayout
+                        android:id="@+id/ll_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:drawablePadding="12dp"
+                            android:text="正在测速中..."
+                            android:textColor="#12cc72"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/icon_speed_test_state" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:maxLines="1"
+                            android:textColor="@color/color_333333"
+                            android:textSize="15sp"
+                            tools:text="TP_GHTYY_6678" />
+
+                        <TextView
+                            android:id="@+id/tv_bandwidth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="正在测速.."
+                            android:textColor="#666666"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="网络质量"
+                            android:textColor="@color/color_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_can_do"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="正在测速.."
+                            android:textColor="#666666"
+                            android:textSize="11sp" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_speed"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="30dp"
+                            android:max="8"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/wifi_speed_result_progress_layer_list"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                             />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="聊天"
+                                android:textColor="@color/color_666666"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="75dp"
+                                android:text="上网"
+                                android:textColor="@color/color_666666"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="75dp"
+                                android:text="游戏"
+                                android:textColor="@color/color_666666"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="视频"
+                                android:textColor="@color/color_666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/tv_test"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/agreement_btn_bg_shape"
+                android:elevation="1dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="停止测速"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

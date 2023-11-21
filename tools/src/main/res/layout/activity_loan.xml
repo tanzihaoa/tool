@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.LoanActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设置"
+                android:textColor="#ff333333"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/la_tab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/rl_top"
+            app:tabIndicator="@drawable/tab_ind"
+            app:tabIndicatorColor="#FFB707"
+            app:tabPaddingBottom="10dp"
+            app:tabSelectedTextColor="#FFB707"
+            app:tabTextColor="#060606" />
+
+        <View
+            android:id="@+id/la_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#D8D8D8"
+            app:layout_constraintTop_toBottomOf="@+id/la_tab" />
+
+        <TextView
+            android:id="@+id/la_tv1"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/shape_f9_10_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="公积金贷款金额"
+            android:textColor="#060606"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_view" />
+
+        <EditText
+            android:id="@+id/la_et_fund_num"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            android:gravity="center_vertical|end"
+            android:hint="万"
+            android:inputType="number"
+            android:paddingEnd="10dp"
+            android:textColor="#060606"
+            android:textColorHint="#D3D3D3"
+            android:textSize="13dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/la_tv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/la_tv1"
+            app:layout_constraintTop_toTopOf="@+id/la_tv1" />
+
+        <TextView
+            android:id="@+id/la_tv2"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/shape_f9_10_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="公积金贷款利率"
+            android:textColor="#060606"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_tv1" />
+
+        <EditText
+            android:id="@+id/la_et_fund_rate"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            android:gravity="center_vertical|end"
+            android:hint="%"
+            android:inputType="numberDecimal"
+            android:paddingEnd="10dp"
+            android:textColor="#060606"
+            android:textColorHint="#D3D3D3"
+            android:textSize="13dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/la_tv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/la_tv2"
+            app:layout_constraintTop_toTopOf="@+id/la_tv2" />
+
+        <TextView
+            android:id="@+id/la_tv3"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/shape_f9_10_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="商业贷款金额"
+            android:textColor="#060606"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_tv2" />
+
+        <EditText
+            android:id="@+id/la_et_bus_num"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            android:gravity="center_vertical|end"
+            android:hint="万"
+            android:inputType="number"
+            android:paddingEnd="10dp"
+            android:textColor="#060606"
+            android:textColorHint="#D3D3D3"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/la_tv3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/la_tv3"
+            app:layout_constraintTop_toTopOf="@+id/la_tv3" />
+
+        <TextView
+            android:id="@+id/la_tv4"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/shape_f9_10_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="商业贷款利率"
+            android:textColor="#060606"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_tv3" />
+
+        <EditText
+            android:id="@+id/la_et_bus_rate"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            android:gravity="center_vertical|end"
+            android:hint="%"
+            android:inputType="numberDecimal"
+            android:paddingEnd="10dp"
+            android:textColor="#060606"
+            android:textColorHint="#D3D3D3"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/la_tv4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/la_tv4"
+            app:layout_constraintTop_toTopOf="@+id/la_tv4" />
+
+        <TextView
+            android:id="@+id/la_tv5"
+            android:layout_width="115dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/shape_f9_10_left"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="贷款年限"
+            android:textColor="#060606"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_tv4" />
+
+        <EditText
+            android:id="@+id/la_et_loan_year"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_f9_10_right_stroke"
+            android:gravity="center_vertical|end"
+            android:hint="年"
+            android:inputType="number"
+            android:paddingEnd="10dp"
+            android:textColor="#060606"
+            android:textColorHint="#D3D3D3"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/la_tv5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/la_tv5"
+            app:layout_constraintTop_toTopOf="@+id/la_tv5" />
+
+        <TextView
+            android:id="@+id/la_tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="13dp"
+            android:text="最新商贷利率4.1%，公积金利率3.25，查看"
+            android:textColor="#898989"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_tv5" />
+
+        <TextView
+            android:id="@+id/la_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:text="利率表"
+            android:textColor="#FBBE2B"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/la_tv6"
+            app:layout_constraintStart_toEndOf="@+id/la_tv6"
+            app:layout_constraintTop_toTopOf="@+id/la_tv6" />
+
+        <TextView
+            android:id="@+id/la_start"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="开始计算"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:background="@drawable/shape_fbb81c_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/la_tv6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
